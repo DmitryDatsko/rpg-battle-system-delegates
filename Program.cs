@@ -7,7 +7,7 @@ var player1 = new Character
     Health = 120,
     CanAttack = character => character.Health > 0,
     OnDeath = BattleLogger.PrintDeath,
-    DamageModifier = damage => (int)(damage * 0.5)
+    DamageModifier = damage => (int)(damage * 0.5),
 };
 
 player1.OnAttack += (_, _) => SoundManager.PlaySound("Hit by player1");
@@ -21,7 +21,7 @@ var player2 = new Character
     Health = 100,
     CanAttack = character => character.Health > 0,
     OnDeath = BattleLogger.PrintDeath,
-    DamageModifier = _ => null
+    DamageModifier = _ => null,
 };
 
 player2.OnAttack += (_, _) => SoundManager.PlaySound("Hit by player2");
